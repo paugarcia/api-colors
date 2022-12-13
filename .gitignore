@@ -16,7 +16,7 @@ composer.phar
 ### VisualStudioCode ###
 .vscode/*
 
-.idea
+.idea/*
 
 ###> phpunit/phpunit ###
 /phpunit.xml
