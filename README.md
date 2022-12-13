@@ -1,2 +1,2 @@
-# catalog-promotions
+# API COLORS
 
