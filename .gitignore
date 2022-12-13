@@ -3,8 +3,8 @@
 /.env.local
 /.env.local.php
 /.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
+/app/config/secrets/prod/prod.decrypt.private.php
+/app/public/bundles/
 /var/
 /vendor/
 
@@ -12,4 +12,13 @@
 
 ### Composer ###
 composer.phar
-/vendor/
+
+### VisualStudioCode ###
+.vscode/*
+
+.idea
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
