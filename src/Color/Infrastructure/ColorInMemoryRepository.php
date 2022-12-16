@@ -8,7 +8,7 @@ use Colors\Color\Domain\Repository\ColorRepository;
 use Colors\Color\Domain\ValueObjects\ColorName;
 use Colors\Color\Domain\ValueObjects\ColorId;
 
-final class ProductInMemoryRepository implements ColorRepository
+final class ColorInMemoryRepository implements ColorRepository
 {
     private array $colors = [
         '000001' => [
@@ -43,14 +43,14 @@ final class ProductInMemoryRepository implements ColorRepository
         ];
     }
 
-    public function find(ColorId $id): ?Color
+    public function find(ColorId $colorId): ?Color
     {
         $color = null;
 
-        if(!empty($this->colors[$id->value()])){
+        if(!empty($this->colors[$colorId->value()])){
             $color = new Color(
-                new ColorId($this->colors[$id->value()]['id']),
-                new ColorName($this->colors[$id->value()]['name'])
+                new ColorId($this->colors[$colorId->value()]['id']),
+                new ColorName($this->colors[$colorId->value()]['name'])
             );
         }
 

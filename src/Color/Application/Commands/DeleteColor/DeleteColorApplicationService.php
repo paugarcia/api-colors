@@ -21,7 +21,7 @@ final class DeleteColorApplicationService
     {
         if (empty($this->colorRepository->find($colorId))){
             throw new ColorNotFoundException(
-                sprintf('Not found any color with this id: %s', $colorId->value())
+                'Not found any color with this id: ' .  $colorId->value()
             );
         }
 

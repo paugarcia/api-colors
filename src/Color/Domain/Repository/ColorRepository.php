@@ -10,5 +10,5 @@ interface ColorRepository
 {
     public function getAll(): array;
     public function create(Color $color): void;
-    public function find(ColorId $id): ?Color;
+    public function find(ColorId $colorId): ?Color;
 }
