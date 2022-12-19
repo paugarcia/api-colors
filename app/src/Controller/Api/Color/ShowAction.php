@@ -15,14 +15,14 @@ use Colors\Color\Application\Queries\FindColorById\FindColorByIdQueryHandler;
 
 use Colors\Color\Infrastructure\ColorInMemoryRepository;
 
-final class FindAction extends AbstractController {
+final class ShowAction extends AbstractController {
 
     /**
      * FIND COLOR
      *
      * This call is used for find a color
      */
-    #[Route('/api/color/find/{colorId}', methods: ['GET'])]
+    #[Route('/api/color/show/{colorId}', methods: ['GET'])]
     #[OA\Response(
         response: 200,
         description: 'Color founded'
