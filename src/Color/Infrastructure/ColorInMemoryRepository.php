@@ -11,12 +11,12 @@ use Colors\Color\Domain\ValueObjects\ColorId;
 final class ColorInMemoryRepository implements ColorRepository
 {
     private array $colors = [
-        '000001' => [
-            'id' => '000001',
+        'red' => [
+            'id' => 'red',
             'name' => 'red',
         ],
-        '000002' => [
-            'id' => '000001',
+        'green' => [
+            'id' => 'green',
             'name' => 'green',
         ],
     ];
@@ -26,7 +26,7 @@ final class ColorInMemoryRepository implements ColorRepository
         $colorsList = [];
 
         foreach ($this->colors as $color) {
-            $colorsList[$color['id']] = new Color(
+            $colorsList[$color['id']] = new Color (
                 new ColorId($color['id']),
                 new ColorName($color['name'])
             );
