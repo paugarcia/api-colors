@@ -18,9 +18,9 @@ use Colors\Color\Infrastructure\ColorInMemoryRepository;
 final class ShowAction extends AbstractController {
 
     /**
-     * FIND COLOR
+     * SHOW COLOR
      *
-     * This call is used for find a color
+     * This call is used for show a specific color
      */
     #[Route('/api/color/show/{colorId}', methods: ['GET'])]
     #[OA\Response(

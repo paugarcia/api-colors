@@ -1,6 +1,6 @@
 <?php
 
-namespace Colors\Color\Services;
+namespace Colors\Color\Application\Services;
 
 use Colors\Color\Domain\Color;
 use Colors\Color\Domain\Repository\ColorRepository;
