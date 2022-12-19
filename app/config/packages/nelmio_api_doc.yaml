@@ -1,8 +1,11 @@
 nelmio_api_doc:
     documentation:
+        tags:
+            - name: "COLORS"
+              description: "Colors related endpoints"
         info:
-            title: My App
-            description: This is an awesome app!
+            title: API COLORS
+            description: This is an awesome colors API!
             version: 1.0.0
     areas: # to filter documented areas
         path_patterns:
