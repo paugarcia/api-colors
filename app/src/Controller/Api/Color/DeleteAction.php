@@ -2,6 +2,7 @@
 
 namespace App\Controller\Api\Color;
 
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -45,7 +46,7 @@ final class DeleteAction extends AbstractController {
 
         try {
             $commandHandler->handle(new DeleteColorCommand($colorId));
-        } catch (\Exception $e){
+        } catch (Exception $e){
             return new JsonResponse(
                 ['message' => '[Error] ' . $e->getMessage()],
                 400

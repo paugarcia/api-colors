@@ -2,17 +2,18 @@
 
 namespace App\Controller\Api\Color;
 
+use Exception;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+use OpenApi\Attributes as OA;
 
 use Colors\Color\Application\Queries\FindColorById\FindColorByIdApplicationService;
 use Colors\Color\Application\Queries\FindColorById\FindColorByIdQuery;
 use Colors\Color\Application\Queries\FindColorById\FindColorByIdQueryHandler;
 
 use Colors\Color\Infrastructure\ColorInMemoryRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
-
-use OpenApi\Attributes as OA;
 
 final class FindAction extends AbstractController {
 
@@ -49,7 +50,7 @@ final class FindAction extends AbstractController {
 
         try {
             $color = $queryHandler->handle(new FindColorByIdQuery($colorId));
-        } catch (\Exception $e){
+        } catch (Exception $e){
             return new JsonResponse(
                 ['message' => '[Error] ' . $e->getMessage()],
                 400
